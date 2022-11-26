@@ -3,7 +3,7 @@ include 'inc/header.inc.php';
 include 'classes/contatos.class.php';
 $contatos = new Contatos();
 ?>
-        <h1>Agenda Senai 2</h1>
+        <h1>Agenda Senai</h1>
         <hr>
         <button><a href="adicionar_contato.php">ADICIONAR</a></button>
         <button><a href="gestao_usuarios.php">GESTÃO DE USUÁRIOS</a></button>
