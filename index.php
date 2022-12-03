@@ -10,12 +10,13 @@ if(!isset($_SESSION['logado'])){
 }
 
 $contatos = new Contatos();
-
+$usuarios = new Usuarios();
+$usuarios->setUsuario($_SESSION['logado']);
 ?>
         <h1>Agenda Senai</h1>
         <hr>
-        <button><a href="adicionar_contato.php">ADICIONAR</a></button>
-        <button><a href="gestao_usuarios.php">GESTÃO DE USUÁRIOS</a></button>
+        <?php if($usuarios->temPermissoes('ADD')): ?><button><a href="adicionar_contato.php">ADICIONAR</a></button><?php endif; ?>
+                <?php if($usuarios->temPermissoes('SUPER')): ?><button><a href="gestao_usuarios.php">GESTÃO DE USUÁRIOS</a></button><?php endif; ?>
         <br><br><hr>
         <button><a href="sair.php">SAIR</a></button>
         <table border="1" width="100%">
