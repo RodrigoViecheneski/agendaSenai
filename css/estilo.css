@@ -1,0 +1,16 @@
+body {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1920px;
+    background-color: #c994d3;
+}
+header {
+    position: relative;
+    background: linear-gradient(#c994d3, white);
+    height: 150px;
+}
+footer {
+    background: linear-gradient(white,#c994d3);
+    height: 100px;
+    clear:both;
+}
